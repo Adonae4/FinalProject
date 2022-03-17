@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "FinalProject.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/FinalProject.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FinalProject.Repository.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "FinalProject.Repository/1.0.0": {
+      "type": "project",
+      "path": "../FinalProject.Repository/FinalProject.Repository.csproj",
+      "msbuildProject": "../FinalProject.Repository/FinalProject.Repository.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "FinalProject.Repository >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\abogu\\.nuget\\packages\\": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\ElevenFiftyAcademy129\\codingFoundations\\CF129_CSHARP_CONSOLE\\FinalProject\\FinalProject.Repository\\FinalProject.Repository.csproj": {
+              "projectPath": "C:\\ElevenFiftyAcademy129\\codingFoundations\\CF129_CSHARP_CONSOLE\\FinalProject\\FinalProject.Repository\\FinalProject.Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

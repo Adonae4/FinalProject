@@ -25,6 +25,62 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\ElevenFiftyAcademy129\\codingFoundations\\CF129_CSHARP_CONSOLE\\FinalProject\\FinalProject.Repository\\FinalProject.Repository.csproj": {
+                "projectPath": "C:\\ElevenFiftyAcademy129\\codingFoundations\\CF129_CSHARP_CONSOLE\\FinalProject\\FinalProject.Repository\\FinalProject.Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\ElevenFiftyAcademy129\\codingFoundations\\CF129_CSHARP_CONSOLE\\FinalProject\\FinalProject.Repository\\FinalProject.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\ElevenFiftyAcademy129\\codingFoundations\\CF129_CSHARP_CONSOLE\\FinalProject\\FinalProject.Repository\\FinalProject.Repository.csproj",
+        "projectName": "FinalProject.Repository",
+        "projectPath": "C:\\ElevenFiftyAcademy129\\codingFoundations\\CF129_CSHARP_CONSOLE\\FinalProject\\FinalProject.Repository\\FinalProject.Repository.csproj",
+        "packagesPath": "C:\\Users\\abogu\\.nuget\\packages\\",
+        "outputPath": "C:\\ElevenFiftyAcademy129\\codingFoundations\\CF129_CSHARP_CONSOLE\\FinalProject\\FinalProject.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\abogu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },

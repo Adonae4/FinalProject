@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace FinalProject.ConsoleApp
 {
     class Program
     {
         static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
+          {
+            UserInterface _ui = new UserInterface();
+
+            _ui.Run();
         }
     }
 }
