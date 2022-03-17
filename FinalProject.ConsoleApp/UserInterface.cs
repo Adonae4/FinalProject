@@ -28,7 +28,7 @@ namespace FinalProject.ConsoleApp
 
          public void MainMenu()
         {
-            Console.WriteLine("\n1View diaper options.\n" +
+            Console.WriteLine("\n 1. View diaper options.\n" +
                               "2. Add diaper to list.\n" +
                               "3. Get diaper by brand name"
             );
@@ -68,7 +68,7 @@ namespace FinalProject.ConsoleApp
 
             foreach (Diaper diaper in _DiaperList)
             {
-               _DiaperList(diaper);
+               return _DiaperList(diaper);
             }
 
         
@@ -81,22 +81,12 @@ namespace FinalProject.ConsoleApp
         public void AddDiaperToList(Diaper Diaper)
         {
             _DiaperList.Add(Diaper);
+
         }
         
 
      
-        //Read
-        public Diaper GetDiaperByBrandName(string userInputBrandNameSearch)
-        {
-            foreach (Diaper diaper in _DiaperList)
-            {
-                if (diaper.DiaperBrandName.ToUpper() == userInputBrandNameSearch.ToUpper())
-                {
-                    return diaper;
-                }
-            }
-
-            return null;
-        }
+        //Read one
+        public Diaper GetDiaperByBrandName();
     }  
     }
