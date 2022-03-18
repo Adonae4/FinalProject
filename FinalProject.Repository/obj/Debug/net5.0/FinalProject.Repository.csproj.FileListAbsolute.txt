@@ -1,0 +1,12 @@
+C:\ElevenFiftyAcademy129\codingFoundations\CF129_CSHARP_CONSOLE\FinalProject\FinalProject.Repository\obj\Debug\net5.0\FinalProject.Repository.csproj.AssemblyReference.cache
+C:\ElevenFiftyAcademy129\codingFoundations\CF129_CSHARP_CONSOLE\FinalProject\FinalProject.Repository\obj\Debug\net5.0\FinalProject.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\ElevenFiftyAcademy129\codingFoundations\CF129_CSHARP_CONSOLE\FinalProject\FinalProject.Repository\obj\Debug\net5.0\FinalProject.Repository.AssemblyInfoInputs.cache
+C:\ElevenFiftyAcademy129\codingFoundations\CF129_CSHARP_CONSOLE\FinalProject\FinalProject.Repository\obj\Debug\net5.0\FinalProject.Repository.AssemblyInfo.cs
+C:\ElevenFiftyAcademy129\codingFoundations\CF129_CSHARP_CONSOLE\FinalProject\FinalProject.Repository\obj\Debug\net5.0\FinalProject.Repository.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyAcademy129\codingFoundations\CF129_CSHARP_CONSOLE\FinalProject\FinalProject.Repository\bin\Debug\net5.0\FinalProject.Repository.deps.json
+C:\ElevenFiftyAcademy129\codingFoundations\CF129_CSHARP_CONSOLE\FinalProject\FinalProject.Repository\bin\Debug\net5.0\FinalProject.Repository.dll
+C:\ElevenFiftyAcademy129\codingFoundations\CF129_CSHARP_CONSOLE\FinalProject\FinalProject.Repository\bin\Debug\net5.0\ref\FinalProject.Repository.dll
+C:\ElevenFiftyAcademy129\codingFoundations\CF129_CSHARP_CONSOLE\FinalProject\FinalProject.Repository\bin\Debug\net5.0\FinalProject.Repository.pdb
+C:\ElevenFiftyAcademy129\codingFoundations\CF129_CSHARP_CONSOLE\FinalProject\FinalProject.Repository\obj\Debug\net5.0\FinalProject.Repository.dll
+C:\ElevenFiftyAcademy129\codingFoundations\CF129_CSHARP_CONSOLE\FinalProject\FinalProject.Repository\obj\Debug\net5.0\ref\FinalProject.Repository.dll
+C:\ElevenFiftyAcademy129\codingFoundations\CF129_CSHARP_CONSOLE\FinalProject\FinalProject.Repository\obj\Debug\net5.0\FinalProject.Repository.pdb
