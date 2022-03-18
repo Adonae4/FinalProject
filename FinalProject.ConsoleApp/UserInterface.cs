@@ -30,7 +30,8 @@ namespace FinalProject.ConsoleApp
         {
             Console.WriteLine("\n 1. View diaper options.\n" +
                               "2. Add diaper to list.\n" +
-                              "3. Get diaper by brand name"
+                              "3. Get diaper by brand name \n" +
+                              "4. Exit"
             );
 
             Console.Write("Enter Selection: ");
@@ -48,7 +49,8 @@ namespace FinalProject.ConsoleApp
             switch (input)
             {
                 case "1":
-                    GetAllDiapersFromList();
+                    List<Diaper> diapers = _Repo.GetAllDiapersFromList();
+                    ViewAllDiapersFromList(diapers); 
                     break;
                 case "2":
                     AddDiaperToList();
@@ -56,31 +58,110 @@ namespace FinalProject.ConsoleApp
                 case "3":
                     GetDiaperByBrandName();
                     break;
+                    case "4":
+                    Console.ReadLine();
+                    isRunning= false;
+                    break;
                 default:
                     break;
             }
         }
-
-           //Read all
-          public void GetAllDiapersFromList()
+        public void ViewAllDiapersFromList(List<Diaper> diapers)
         {
-            List<Diaper> diapers = _Repo.GetAllDiapersFromList();
+          foreach(var diaper in diapers){
+              Console.WriteLine("");
+              Console.WriteLine($"Diaper Brand: {diaper.DiaperBrandName}\n" +
+            $"Overnight Compatible?: {diaper.IsOvernightCompatible} \n" +
+            $"Cost per Diaper (cents): {diaper.CentPerDiaper}\n");
 
-            foreach (Diaper diaper in _DiaperList)
-            {
-               Console.WriteLine(_DiaperList);
-            }
 
-        
+          }
+          Console.WriteLine("Press any key to continue");
+          Console.ReadLine();
         }
 
+           //Read all
+        //   public void GetAllDiapersFromList()
+        // {
+        //     List<Diaper> diapers = _Repo.GetAllDiapersFromList();
+
+        //     foreach (Diaper diaper in _DiaperList)
+        //     {
+        //        Console.WriteLine(_DiaperList);
+        //     }
+
         
-        public List<Diaper> _DiaperList = new List<Diaper>();
+        // }
+
+        
+        // public List<Diaper> _DiaperList = new List<Diaper>();
 
         // CREATE
-        public void AddDiaperToList(Diaper diaper)
+        public void AddDiaperToList()
         {
-            _DiaperList.Add(diaper);
+            Diaper diaper = new Diaper();
+            Console.WriteLine("Enter brand name here: \n" +
+            "1. Huggies \n" +
+            "2. Pampers \n" +
+            "3. MamaBear \n" +
+            "4. Parents Choice \n" +
+            "5. Luvs \n" +
+            "6. Target Brand"             
+             );
+           string enumInput = Console.ReadLine();
+
+           switch(enumInput){
+               case "1": 
+               diaper.DiaperBrandName = DiaperBrand.Huggies;
+               break;
+               case "2":
+                diaper.DiaperBrandName = DiaperBrand.Pampers;
+               break;
+               case "3": 
+               diaper.DiaperBrandName = DiaperBrand.MamaBear;
+               break;
+               case "4": 
+               diaper.DiaperBrandName = DiaperBrand.ParentsChoice;
+               break;
+               case "5":
+                diaper.DiaperBrandName = DiaperBrand.Luvs;
+               break;
+               case "6": diaper.DiaperBrandName = DiaperBrand.TargetBrand;
+               break;
+
+           }
+           Console.WriteLine("what is the cost per diaper (in cents)? ");
+            diaper.CentPerDiaper = Int32.Parse(Console.ReadLine());
+
+            bool overNightLoop = true;
+            while(overNightLoop)
+            {
+
+            }
+            Console.WriteLine("Is this diaper overnight compatible? Enter Y or N");
+            string yOrN = Console.ReadLine();
+
+            if(yOrN == "y" ||yOrN == "Y")
+            {
+                diaper.IsOvernightCompatible = true;
+                overNightLoop = false;
+            } else if (yOrN == "n" || yOrN == "N")
+            {
+                diaper.IsOvernightCompatible = false;
+                overNightLoop = false;
+            }
+            else{
+                Console.WriteLine("Invalid input.");
+                Console.ReadLine();
+            }
+            Console.WriteLine("Here is Your entry, press any key to continue...");
+            Console.WriteLine($"Diaper Brand: {diaper.DiaperBrandName}\n" +
+            $"Overnight Compatible?: {diaper.IsOvernightCompatible} \n" +
+            $"Cost per Diaper (cents): {diaper.CentPerDiaper}\n");
+
+
+            Console.ReadKey();
+           _Repo.AddDiaperToList(diaper);
 
         }       
 
@@ -98,28 +179,35 @@ namespace FinalProject.ConsoleApp
              );
              string brandName = Console.ReadLine();
 
-             DiaperBrand tomato = DiaperBrand.Huggies;
+             DiaperBrand brand = DiaperBrand.Huggies;
 
             switch (brandName)
             {
                 case "1": 
-                    tomato = DiaperBrand.Huggies;
+                    brand = DiaperBrand.Huggies;
                     break;
                 case "2": 
-                    tomato = DiaperBrand.Pampers;
+                    brand = DiaperBrand.Pampers;
                     break;
                 case "3": 
-                    tomato = DiaperBrand.MamaBear;
+                    brand = DiaperBrand.MamaBear;
                     break;
                 case "4": 
-                    tomato = DiaperBrand.ParentsChoice;
+                    brand = DiaperBrand.ParentsChoice;
                     break;
                 case "5": 
-                    tomato = DiaperBrand.Luvs;
+                    brand = DiaperBrand.Luvs;
                     break;
                 case "6": 
-                    tomato = DiaperBrand.TargetBrand;
+                    brand = DiaperBrand.TargetBrand;
                     break;
+            }
+            List<Diaper> brandDiapers = _Repo.GetDiaperByBrandName(brand);
+            Console.WriteLine($"{brand}");
+            foreach(var diaper in brandDiapers){
+                Console.WriteLine($"Cost per diaper: {diaper.CentPerDiaper}\n" +
+                $"Overnight compatible?: {diaper.IsOvernightCompatible}");
+            
             }
 
             return null;

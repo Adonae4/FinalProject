@@ -23,12 +23,18 @@ namespace FinalProject.Repository
         }
 
         //Read one object
-        public Diaper GetDiaperByBrandName(string userInputBrandNameSearch)
+        public List<Diaper> GetDiaperByBrandName(DiaperBrand brand)
         {
+            List<Diaper> brandDiapers = new List<Diaper>();
+
+            foreach(var diaper in _DiaperList){
+                if(diaper.DiaperBrandName == brand) {
+                    brandDiapers.Add(diaper);
+                }
+            }
+            return brandDiapers;
+
           
-            return null;
-
-
         }
          public void SeedDiaperData()
         {

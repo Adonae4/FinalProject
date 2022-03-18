@@ -26,5 +26,17 @@ namespace FinalProject.Repository
 
     }
 
+      public Diaper(int centPerDiaper, DiaperBrand diaperBrandName, bool isOverNightCompatible )
+    {
+        CentPerDiaper = centPerDiaper;
+        DiaperBrandName = diaperBrandName;
+        IsOvernightCompatible = IsOvernightCompatible;
+
+    }
+    public Diaper()
+    {
+
+    }
+
     }
 }
